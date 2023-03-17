@@ -1,0 +1,184 @@
+CREATING TABLES:
+hbase(main):001:0>create 'cust','name','brand','disc'
+0 row(s) in 1.3450 seconds
+
+=> Hbase::Table - cust
+hbase(main):002:0>create 'item_1','item_name','item_pr'
+0 row(s) in 1.3250 seconds
+
+=> Hbase::Table - item_1
+hbase(main):003:0>create 'item_2','item_name','item_pr'
+0 row(s) in 1.2250 seconds
+
+=> Hbase::Table - item_2
+hbase(main):004:0>create 'item_3','item_name','item_pr'
+0 row(s) in 1.3600 seconds
+
+=> Hbase::Table - item_3
+hbase(main):005:0>create 'salesman','name','slry'
+0 row(s) in 1.1250 seconds
+
+=> Hbase::Table - salesman
+
+INSERTING DATA:
+hbase(main):001:0> put 'cust','101','name','ram'
+0 row(s) in 0.0140 seconds
+hbase(main):002:0> put 'cust','102','name','prem'
+0 row(s) in 0.0140 seconds
+hbase(main):003:0> put 'cust','103','name','raju'
+0 row(s) in 0.0140 seconds
+hbase(main):004:0> put 'cust','101','brand','standard'
+0 row(s) in 0.0140 seconds
+hbase(main):005:0> put 'cust','102','brand','cock'
+0 row(s) in 0.0140 seconds
+hbase(main):006:0> put 'cust','103','brand','metros'
+0 row(s) in 0.0140 seconds
+hbase(main):007:0> put 'cust','101','disc','10'
+0 row(s) in 0.0140 seconds
+hbase(main):008:0> put 'cust','102','disc','10'
+0 row(s) in 0.0140 seconds
+hbase(main):009:0> put 'cust','103','disc','10'
+0 row(s) in 0.0140 seconds
+hbase(main):010:0> put 'item_1','001','item_name','fp'
+0 row(s) in 0.0140 seconds
+hbase(main):011:0> put 'item_1','002','item_name','gc'
+0 row(s) in 0.0140 seconds
+hbase(main):012:0> put 'item_1','003','item_name','sprkles'
+0 row(s) in 0.0140 seconds
+hbase(main):013:0> put 'item_1','001','item_pr','80'
+0 row(s) in 0.0140 seconds
+hbase(main):014:0> put 'item_1','002','item_pr','100'
+0 row(s) in 0.0140 seconds
+hbase(main):015:0> put 'item_1','003','item_pr','30'
+0 row(s) in 0.0140 seconds
+hbase(main):016:0> put 'item_2','004','item_name','fp'
+0 row(s) in 0.0140 seconds
+hbase(main):017:0> put 'item_2','005','item_name','gc'
+0 row(s) in 0.0140 seconds
+hbase(main):018:0> put 'item_2','006','item_name','sprkles'
+0 row(s) in 0.0140 seconds
+hbase(main):019:0> put 'item_2','004','item_pr','80'
+0 row(s) in 0.0140 seconds
+hbase(main):020:0> put 'item_2','005','item_pr','110'
+0 row(s) in 0.0140 seconds
+hbase(main):021:0> put 'item_2','006','item_pr','35'
+0 row(s) in 0.0140 seconds
+hbase(main):022:0> put 'item_3','007','item_name','fp'
+0 row(s) in 0.0140 seconds
+hbase(main):023:0> put 'item_3','008','item_name','gc'
+0 row(s) in 0.0140 seconds
+hbase(main):024:0> put 'item_3','009','item_name','sprkles'
+0 row(s) in 0.0140 seconds
+hbase(main):025:0> put 'item_3','007','item_pr','80'
+0 row(s) in 0.0140 seconds
+hbase(main):026:0> put 'item_3','008','item_pr','100'
+0 row(s) in 0.0140 seconds
+hbase(main):027:0> put 'item_3','009','item_pr','30'
+0 row(s) in 0.0140 seconds
+hbase(main):028:0> put 'salesman','1122','name','arun'
+0 row(s) in 0.0140 seconds
+hbase(main):029:0> put 'salesman','1123','name','veera'
+0 row(s) in 0.0140 seconds
+hbase(main):030:0> put 'salesman','1124','name','suresh'
+0 row(s) in 0.0140 seconds
+hbase(main):031:0> put 'salesman','1122','slry','20000'
+0 row(s) in 0.0140 seconds
+hbase(main):032:0> put 'salesman','1123','slry','25000'
+0 row(s) in 0.0140 seconds
+hbase(main):033:0> put 'salesman','1124','slry','30000'
+0 row(s) in 0.0140 seconds
+
+DISPLAYING DATA:
+hbase(main):020:0> scan 'cust'
+ROW                       COLUMN+CELL                                                           
+ 101                      column=brand:, timestamp=1679065275318, value=standard                
+ 101                      column=disc:, timestamp=1679065318793, value=10                       
+ 101                      column=name:, timestamp=1679065232852, value=ram                      
+ 102                      column=brand:, timestamp=1679065389648, value=cock                    
+ 102                      column=disc:, timestamp=1679065426935, value=10                       
+ 102                      column=name:, timestamp=1679065362728, value=prem                     
+ 103                      column=brand:, timestamp=1679066250243, value=metros                  
+ 103                      column=disc:, timestamp=1679066283665, value=10                       
+ 103                      column=name:, timestamp=1679065471515, value=raju                     
+3 row(s) in 0.0530 seconds
+
+hbase(main):021:0> scan 'item_1'
+ROW                       COLUMN+CELL                                                           
+ 001                      column=item_name:, timestamp=1679066544379, value=fp                  
+ 001                      column=item_pr:, timestamp=1679066578030, value=80                    
+ 002                      column=item_name:, timestamp=1679066610390, value=gc                  
+ 002                      column=item_pr:, timestamp=1679066777753, value=100                   
+ 003                      column=item_name:, timestamp=1679066820346, value=sprkles             
+ 003                      column=item_pr:, timestamp=1679066851758, value=30                    
+3 row(s) in 0.0540 seconds
+
+hbase(main):022:0> scan 'item_2'
+ROW                       COLUMN+CELL                                                           
+ 004                      column=item_name:, timestamp=1679067158030, value=fp                  
+ 004                      column=item_pr:, timestamp=1679067259058, value=80                    
+ 005                      column=item_name:, timestamp=1679067300336, value=gc                  
+ 005                      column=item_pr:, timestamp=1679067326572, value=110                   
+ 006                      column=item_name:, timestamp=1679067467031, value=sprkles             
+ 006                      column=item_pr:, timestamp=1679067548930, value=35                    
+3 row(s) in 0.0250 seconds
+
+hbase(main):023:0> scan 'item_2'
+ROW                       COLUMN+CELL                                                           
+ 004                      column=item_name:, timestamp=1679067158030, value=fp                  
+ 004                      column=item_pr:, timestamp=1679067259058, value=80                    
+ 005                      column=item_name:, timestamp=1679067300336, value=gc                  
+ 005                      column=item_pr:, timestamp=1679067326572, value=110                   
+ 006                      column=item_name:, timestamp=1679067467031, value=sprkles             
+ 006                      column=item_pr:, timestamp=1679067548930, value=35                    
+3 row(s) in 0.0230 seconds
+
+hbase(main):024:0> scan 'item_3'
+ROW                       COLUMN+CELL                                                           
+ 007                      column=item_name:, timestamp=1679067661164, value=fp                  
+ 007                      column=item_pr:, timestamp=1679067689512, value=85                    
+ 008                      column=item_name:, timestamp=1679067786657, value=gc                  
+ 008                      column=item_pr:, timestamp=1679067818219, value=115                   
+ 009                      column=item_name:, timestamp=1679067866281, value=sprkles             
+ 009                      column=item_pr:, timestamp=1679067894335, value=40                    
+3 row(s) in 0.0580 seconds
+
+hbase(main):025:0> scan 'salesman'
+ROW                       COLUMN+CELL                                                           
+ 1122                     column=name:, timestamp=1679067998958, value=arun                     
+ 1122                     column=slry:, timestamp=1679068022963, value=20000                    
+ 1123                     column=name:, timestamp=1679068048222, value=veera                    
+ 1123                     column=slry:, timestamp=1679068074768, value=25000                    
+ 1124                     column=name:, timestamp=1679068103533, value=suresh                   
+ 1124                     column=slry:, timestamp=1679068133811, value=30000                    
+3 row(s) in 0.0650 seconds
+
+UPDATE DATA:
+hbase(main):001:0> put 'salesman','1124','slry','40000'
+0 row(s) in 0.2480 seconds
+
+hbase(main):002:0> scan 'salesman'
+ROW                       COLUMN+CELL                                                           
+ 1122                     column=name:, timestamp=1679067998958, value=arun                     
+ 1122                     column=slry:, timestamp=1679068022963, value=20000                    
+ 1123                     column=name:, timestamp=1679068048222, value=veera                    
+ 1123                     column=slry:, timestamp=1679068074768, value=25000                    
+ 1124                     column=name:, timestamp=1679068103533, value=suresh                   
+ 1124                     column=slry:, timestamp=1679071829292, value=40000                    
+3 row(s) in 0.0460 seconds
+
+hbase(main):003:0> delete 'salesman','1124','slry'
+0 row(s) in 0.0300 seconds
+
+DELETE DATA:
+
+hbase(main):004:0> scan 'salesman'
+ROW                       COLUMN+CELL                                                           
+ 1122                     column=name:, timestamp=1679067998958, value=arun                     
+ 1122                     column=slry:, timestamp=1679068022963, value=20000                    
+ 1123                     column=name:, timestamp=1679068048222, value=veera                    
+ 1123                     column=slry:, timestamp=1679068074768, value=25000                    
+ 1124                     column=name:, timestamp=1679068103533, value=suresh                   
+ 1124                     column=slry:, timestamp=1679068133811, value=30000                    
+3 row(s) in 0.0340 seconds
+
+
