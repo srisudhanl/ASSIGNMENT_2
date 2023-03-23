@@ -28,6 +28,12 @@ For item_2 entity the attributes are itemname,id,price
 For item_3 entity the attributes are itemname,id,price
 For salesman entity the attributes are name,id,salary
 
+![WhatsApp Image 2023-03-23 at 5 21 36 PM](https://user-images.githubusercontent.com/109335374/227216340-724a896f-71ec-4d1b-900e-3f0f471544b2.jpeg)
+![WhatsApp Image 2023-03-23 at 5 14 12 PM](https://user-images.githubusercontent.com/109335374/227216349-011303b9-23a3-4d93-ade8-f1eddf6a93d5.jpeg)
+![WhatsApp Image 2023-03-23 at 5 13 45 PM](https://user-images.githubusercontent.com/109335374/227216354-560d0d51-ba0e-4501-92d3-72af858d1773.jpeg)
+![WhatsApp Image 2023-03-23 at 5 09 45 PM](https://user-images.githubusercontent.com/109335374/227216359-af210e7f-7f0c-4cde-966b-047c11bc3ec6.jpeg)
+![WhatsApp Image 2023-03-23 at 5 01 09 PM](https://user-images.githubusercontent.com/109335374/227216365-70ab36d9-628f-4deb-b7b6-b2a487a49e5f.jpeg)
+
 To make the above operation I used the following keywords:
 
      put- put keyword is used to insert and update the values of the family in the table.
